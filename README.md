@@ -1,5 +1,10 @@
 The intent of this theme is to provide a solid starting place for Hugo sites with basic features and include best practices for performance, accessibility, and rapid development.
 
+TODO
+
+- [ ] add in "globals" capability
+- [ ] make more generic
+
 Features
 
 - Responsive
