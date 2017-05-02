@@ -37,11 +37,11 @@
 
   <body class="ma0 avenir bg-near-white{{ with getenv "HUGO_ENV" }} {{ . }}{{ end }}">
 
-    {{ block "header" . }}{{ partial "site-header.html" .}}{{ end }}
+    {{ block "header" . }}{{ partial "global/header.html" .}}{{ end }}
     <main class="pb7" role="main">
       {{ block "main" . }}{{ end }}
     </main>
-    {{ block "footer" . }}{{ partial "site-footer.html" . }}{{ end }}
-    {{ block "scripts" . }}{{ partial "site-scripts.html" . }}{{ end }}
+    {{ block "footer" . }}{{ partial "global/footer.html" . }}{{ end }}
+    {{ block "scripts" . }}{{ partial "global/scripts.html" . }}{{ end }}
   </body>
 </html>
