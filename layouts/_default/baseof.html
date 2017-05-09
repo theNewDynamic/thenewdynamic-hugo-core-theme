@@ -7,9 +7,7 @@
       {{ end }}
     {{ end }}
 
-  <title>
-    {{ .Site.Title }} {{ with .Title }} | {{ . }}{{ end }}
-  </title>
+  <title>{{ .Site.Title }} {{ with .Title }} | {{ . }}{{ end }}</title>
 
   {{- partial "global/head-meta-and-links.html" . -}}
   {{- partial "global/head-additions.html" . -}}
