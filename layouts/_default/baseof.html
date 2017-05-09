@@ -1,5 +1,5 @@
 <!DOCTYPE html>{{ $amp := $.Param "amp" }}
-<html {{ if ne $amp false }}amp{{ end }} lang="{{ $.Site.LanguageCode | default "en" }}" class="no-js">
+<html {{ if ne $amp false }}amp{{ end }} lang="{{ $.Site.LanguageCode | default "en" }}" class="no-js" data>
   <head>
     {{ if ne $amp false }}
       {{ block "amp" . -}}
