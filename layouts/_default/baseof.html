@@ -11,7 +11,7 @@
 
   {{- partial "global/head-meta-and-links.html" . -}}
   {{- partial "global/head-additions.html" . -}}
-  {{ block "scripts" . }}{{ partial "global/scripts.html" . }}{{ end }}
+
   </head>
 
 
@@ -21,7 +21,7 @@
       {{ block "main" . }}{{ end }}
     </main>
     {{ block "footer" . }}{{ partial "global/footer.html" . }}{{ end }}
-
+    {{ block "scripts" . }}{{ partial "global/scripts.html" . }}{{ end }}
 
 
   </body>
