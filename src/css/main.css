@@ -1,5 +1,22 @@
+/* Base */
 @import '_tachyons';
-@import '_code';
-@import '_hugo-internal-templates';
-@import '_social-icons';
-@import '_styles';
+
+ /*Modules */
+/* @import '_animate'; */
+@import '_color-scheme';
+/* @import '_columns'; */
+/* @import '_font-family'; */
+/* @import '_menu'; */
+@import '_social-icons.css';
+/* @import '_side-nav'; */
+/* @import '_transitions'; */
+/*  @import '_widths'; */
+
+
+ /*Variables */
+@import '_variables';
+
+ /*Addons */
+/* @import 'font/_muli-200'; */
+@import 'font/_muli-400';
+@import 'font/_muli-800';
