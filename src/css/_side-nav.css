@@ -2,8 +2,8 @@ body.sidebar_left .sidebar {
   width: 100%;
 }
 
-body.sidebar_left main,
-body.sidebar_right main {
+body.sidebar_left .content,
+body.sidebar_right .content {
   margin-right: auto;
   margin-left: auto;
 }
@@ -25,10 +25,10 @@ body.sidebar_right main {
     width: var(--sidebar-width);
     right:  0;
   }
-  body.sidebar_left main {
+  body.sidebar_left .content {
     margin-left: var(--sidebar-width);
   }
-  body.sidebar_right main {
+  body.sidebar_right .content {
     margin-right: var(--sidebar-width);
   }
 
