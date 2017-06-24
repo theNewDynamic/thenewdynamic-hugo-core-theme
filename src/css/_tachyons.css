@@ -1,4 +1,4 @@
-/*! TACHYONS v4.7.0 | http://tachyons.io */
+/*! TACHYONS v4.7.4 | http://tachyons.io */
 
 /*
  *
@@ -41,7 +41,7 @@
 @import 'tachyons/src/_border-style';
 @import 'tachyons/src/_border-widths';
 @import 'tachyons/src/_box-shadow';
-@import 'tachyons/src/_code';
+/*@import 'tachyons/src/_code';*/
 @import 'tachyons/src/_coordinates';
 @import 'tachyons/src/_clears';
 @import 'tachyons/src/_display';
@@ -66,7 +66,7 @@
 @import 'tachyons/src/_skins-pseudo';
 @import 'tachyons/src/_spacing';
 @import 'tachyons/src/_negative-margins';
-@import 'tachyons/src/_tables';
+/*@import 'tachyons/src/_tables';*/
 @import 'tachyons/src/_text-decoration';
 @import 'tachyons/src/_text-align';
 @import 'tachyons/src/_text-transform';
@@ -79,7 +79,7 @@
 @import 'tachyons/src/_hovers';
 @import 'tachyons/src/_z-index';
 @import 'tachyons/src/_nested';
-@import 'tachyons/src/_styles';
+/*@import 'tachyons/src/_styles';*/
 
 /* Variables */
 /* Importing here will allow you to override any variables in the modules */
