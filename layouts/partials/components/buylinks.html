@@ -1,0 +1,32 @@
+<div class="mt4-l smallprint-font {{ .textcolor }}">
+  <div class="f5 fw6 mb2">order from these retailers</div>
+  {{ if .hardcover }}
+    <a href="//www.indiebound.org/product/info.jsp?isbn={{ .hardcover }}" target="_blank" class="{{ .buylinkClasses }}">
+      Your Independent Bookstore
+    </a>
+    <a href="//search.barnesandnoble.com/booksearch/isbnInquiry.asp?EAN={{ .hardcover }}" target="_blank" class="{{ .buylinkClasses }}">
+      Barnes & Noble
+    </a>
+    <span class='isbn10_{{ .Params.hardcover_isbn }}'></span><!--  pulls in 10 digit ASIN for -->
+    <!-- {{ partial "amazon_isbn_hardcover.js" (dict "content" . ) }} -->
+  {{ else if .paperback }}
+    <a href="//www.indiebound.org/product/info.jsp?isbn={{ .paperback }}" target="_blank" class="{{ .buylinkClasses }}">
+      Your Independent Bookstore
+    </a>
+    <a href="//search.barnesandnoble.com/booksearch/isbnInquiry.asp?EAN={{ .paperback }}" target="_blank" class="{{ .buylinkClasses }}">
+      Barnes & Noble
+    </a>
+    <span class='isbn10_{{ .paperback }}'></span><!--  pulls in 10 digit ASIN for -->
+    {{ partial "amazon_isbn_paperback.js" (dict "paperback" .paperback "buylinkClasses" .buylinkClasses ) }}
+  {{ end }}
+
+  {{ if .ebook }}
+    <a href="//itunes.apple.com/us/book/isbn{{ .ebook }}" target="_blank" class="{{ .buylinkClasses }}">
+      Apple iBooks
+    </a>
+  {{ end }}
+  <div class="mb2">
+
+  </div>
+
+</div>
