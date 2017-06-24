@@ -17,7 +17,7 @@
   </header>
 {{ else }}
   <header>
-    <div class="{{ .Site.Params.background_color_class | default "bg-black" }}">
+    <div class="{{ $.Param "background_color_class" | default "bg-primary-color-dark" }}">
       {{ partial "global/navigation.html" . }}
     </div>
   </header>
