@@ -4,6 +4,9 @@
     <title>{{ .Site.Title }} {{ with .Title }} | {{ . }}{{ end }}</title>
     {{- partial "global/head-meta-and-links.html" . -}}
     {{- partial "global/head-additions.html" . -}}
+    {{ block "css" . }}
+     {{- partial "global/color-palette.html" . -}}
+   {{ end }}
   </head>
   <body class="ma0{{ with .Site.Params.body_classes }} {{ . }}{{ end }}{{ with getenv "HUGO_ENV" }} {{ . }}{{ end }}">
     {{ block "header" . }}{{ partial "global/header.html" .}}{{ end }}
