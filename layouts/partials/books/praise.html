@@ -1,0 +1,14 @@
+{{ $reviews := .context.Params.reviews }}
+{{ $count := .count }}
+
+<h2 class="mt5">
+  Praise for <i>{{ .context.Title }}</i>
+</h2>
+{{ range first $count ($reviews) }}
+  <div class="f3-l lh-copy mb5">
+    <p class="mv4">
+      {{ .copy_markdown | markdownify }}
+    </p>
+    <span class="f5"> – {{ .attribution | markdownify }}</span>
+  </div>
+{{ end }}
