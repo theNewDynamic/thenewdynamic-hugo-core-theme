@@ -1,7 +1,7 @@
-+++
-title = ""
-date = ""
-tags = []
-featured_image = ""
-description = ""
-+++
+---
+title: "{{ replace .TranslationBaseName "-" " " | title }}"
+date: ""
+tags: 
+featured_image: ""
+description: ""
+---
