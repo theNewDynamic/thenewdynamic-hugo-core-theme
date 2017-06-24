@@ -6,7 +6,7 @@
   <div class="center cf min-vh-100 mw7 pv5 ph3 ph4-ns">
 
     {{ range $events }}
-      <article class="bg-white mb4 pa4 relative w-100">
+      <article class="bg-accent-color-light mb4 pa4 relative w-100">
         {{ .Render "view-item" }}
       </article>
     {{ end }}
@@ -15,7 +15,7 @@
       Past Events
     </h1>
     {{ range $events_past }}
-      <article class="bg-white mb4 pa4 relative w-100">
+      <article class="bg-accent-color-light mb4 pa4 relative w-100">
         {{ .Render "view-item-shortened" }}
       </article>
     {{ end }}
