@@ -1,10 +1,4 @@
-<time class="f7 dib accent-color sans-serif tracked" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
-  {{ if eq .Params.show_time false }}
-    {{ .Date.Format "January 2, 2006" }}
-  {{ else }}
-    {{ .Date.Format "January _2, 2006 3:04 pm" }}
-  {{ end }}
-</time>
+{{ partial "components/time.html" (dict "context" . ) }}
 <h1 class="lh-title">
   <a href="{{ .URL }}" class="dim link primary-color-dark">
     {{ .Title | markdownify }}
