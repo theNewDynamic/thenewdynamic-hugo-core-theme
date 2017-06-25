@@ -14,7 +14,17 @@
       </div>
     </section>
     <section class="w-80-l ph4 ph4-m center">
-      {{- partial "books/praise.html" (dict "count" 100 "context" . ) -}}
+      {{/* {{- partial "books/praise.html" (dict "count" 100 "context" . ) -}} */}}
+      {{/* Replace with partial when we have this  */}}
+        {{ $book_path := slice .File.Path }}
+        {{ $reviews := where .Site.RegularPages "Section" "review" }}
+        {{ range $reviews }}
+          {{ $related_book := intersect $book_path .Params.books }}
+          {{ if $related_book }}
+            {{ .Render "fancy-quote" }}
+          {{ end }}
+        {{ end }}
+      {{/* END */}}
     </section>
     <div class="tc mv5">
       {{ partial "books/buylinks" (dict "hardcover" .Params.hardcover_isbn "paperback" .Params.paperback_isbn "ebook" .Params.ebook_isbn "buylinkClasses" "f5 link bg-animate hover-bg-near-black br2 ba ph3 pv2 mr1 mb2 db dib-ns black hover-white" "textcolor" "black") }}
