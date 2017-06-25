@@ -10,14 +10,15 @@
         <div class="bb b--black-20 measure-wide mv4 nested-copy-line-height">
           {{ .Content }}
         </div>
-        {{ partial "books/buylinks" (dict "hardcover" .Params.hardcover_isbn "paperback" .Params.paperback_isbn "ebook" .Params.ebook_isbn "buylinkClasses" "f5 link bg-animate hover-bg-near-black br2 ba ph3 pv2 mr1 mb2 db dib-ns black hover-white" "textcolor" "black") }}
+        {{ partial "books/buylinks" (dict "context" . "buylinkClasses" "f5 link bg-animate hover-bg-near-black br2 ba ph3 pv2 mr1 mb2 db dib-ns black hover-white" "textcolor" "black") }}
       </div>
     </section>
     <section class="w-80-l ph4 ph4-m center">
-      {{- partial "books/praise.html" (dict "count" 100 "context" . ) -}}      
+      {{- partial "books/praise.html" (dict "count" 100 "context" . ) -}}
     </section>
     <div class="tc mv5">
-      {{ partial "books/buylinks" (dict "hardcover" .Params.hardcover_isbn "paperback" .Params.paperback_isbn "ebook" .Params.ebook_isbn "buylinkClasses" "f5 link bg-animate hover-bg-near-black br2 ba ph3 pv2 mr1 mb2 db dib-ns black hover-white" "textcolor" "black") }}
+    {{ partial "books/buylinks" (dict "context" . "buylinkClasses" "f5 link bg-animate hover-bg-near-black br2 ba ph3 pv2 mr1 mb2 db dib-ns black hover-white" "textcolor" "black") }}
+
     </div>
   </main>
 {{ end }}

@@ -2,13 +2,15 @@
 title: "{{ replace .TranslationBaseName "-" " " | title }}"
 subtitle:
 date: {{ .Date }}
-draft: false
-genre:
-cover_image:
-description:
-# TODO: Replace these with an object
-ebook_isbn:
-hardcover_isbn:
-paperback_isbn: 
 publication_date: {{ .Date }}
+draft: false
+description:
+genre:
+ - fiction
+editions_isbn:
+  hardcover: ''
+  paperback: 9781501126376
+  ebook: 9781501126406
+cover_image:
+featured_image:
 ---

@@ -20,7 +20,7 @@
           <div class="b--black-20 bb mv4 nested-copy-line-height">
             {{ .Content }}
           </div>
-          {{ partial "books/buylinks" (dict "hardcover" .Params.hardcover_isbn "paperback" .Params.paperback_isbn "ebook" .Params.ebook_isbn "buylinkClasses" "f5 link bg-animate hover-bg-near-black br2 ba ph3 pv2 mr1 mb2 db dib-ns black hover-white" "textcolor" "black") }}
+          {{ partial "books/buylinks" (dict "context" . "buylinkClasses" "f5 link bg-animate hover-bg-near-black br2 ba ph3 pv2 mr1 mb2 db dib-ns black hover-white" "textcolor" "black") }}
         </div>
       </section>
       <section class="center mb6 ph4 ph4-m w-80-l">

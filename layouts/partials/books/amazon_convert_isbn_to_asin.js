@@ -16,7 +16,10 @@
     }
     return start + checkDig;
   }
-  var isbn10 = document.getElementsByClassName("isbn10_{{ .paperback | safeJS }}");
+  var switchIsbn = function(el) {
+    el.innerHTML = '<a href="https://www.amazon.com/dp/' + ISBN13toISBN10("{{ .edition | safeJS }}") + '" title="Amazon" target="_blank" class="{{ .buylinkClasses }}">Amazon</a>';
+  }
+  var isbn10 = document.getElementsByClassName("isbn10_{{ .edition | safeJS }}");
   for(var i = 0; i < isbn10.length; i++) {
     switchIsbn(isbn10[i])
   }

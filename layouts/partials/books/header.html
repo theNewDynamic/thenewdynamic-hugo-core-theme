@@ -9,7 +9,7 @@
       </span>
     {{ end }}
   </h1>
-  {{ with .Params.genre }}
+  {{ range .Params.genre }}
     <h2 class="f5 fw2 gray ma0 sans-serif">
       {{ . | humanize }}
     </h2>

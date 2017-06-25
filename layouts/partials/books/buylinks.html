@@ -1,27 +1,31 @@
+{{ $buylinkClasses := .buylinkClasses}}
 <div class="mt4-l smallprint-font {{ .textcolor }}">
   <div class="f5 fw6 mb2">Order from these retailers</div>
-  {{ if .hardcover }}
-    <a href="//www.indiebound.org/product/info.jsp?isbn={{ .hardcover }}" target="_blank" class="{{ .buylinkClasses }}">
+
+  {{ with .context.Params.editions_isbn.hardcover  }}
+    <a href="//www.indiebound.org/product/info.jsp?isbn={{ . }}" target="_blank" class="{{ $buylinkClasses }}">
       Your Independent Bookstore
     </a>
-    <a href="//search.barnesandnoble.com/booksearch/isbnInquiry.asp?EAN={{ .hardcover }}" target="_blank" class="{{ .buylinkClasses }}">
+    <a href="//search.barnesandnoble.com/booksearch/isbnInquiry.asp?EAN={{ . }}" target="_blank" class="{{ $buylinkClasses }}">
       Barnes & Noble
     </a>
-    <span class='isbn10_{{ .Params.hardcover_isbn }}'></span><!--  pulls in 10 digit ASIN for -->
-    {{ partial "books/amazon_isbn_hardcover.js" (dict "content" . ) }}
-  {{ else if .paperback }}
-    <a href="//www.indiebound.org/product/info.jsp?isbn={{ .paperback }}" target="_blank" class="{{ .buylinkClasses }}">
-      Your Independent Bookstore
-    </a>
-    <a href="//search.barnesandnoble.com/booksearch/isbnInquiry.asp?EAN={{ .paperback }}" target="_blank" class="{{ .buylinkClasses }}">
-      Barnes & Noble
-    </a>
-    <span class='isbn10_{{ .paperback }}'></span><!--  pulls in 10 digit ASIN for -->
-    {{ partial "books/amazon_isbn_paperback.js" (dict "paperback" .paperback "buylinkClasses" .buylinkClasses ) }}
+    <span class='isbn10_{{ . }}'></span><!--  pulls in 10 digit ASIN for -->
+    {{ partial "books/amazon_convert_isbn_to_asin.js" (dict "edition" . "buylinkClasses" $buylinkClasses ) }}
   {{ end }}
 
-  {{ if .ebook }}
-    <a href="//itunes.apple.com/us/book/isbn{{ .ebook }}" target="_blank" class="{{ .buylinkClasses }}">
+  {{ with .context.Params.editions_isbn.paperback }}
+    <a href="//www.indiebound.org/product/info.jsp?isbn={{ . }}" target="_blank" class="{{ $buylinkClasses }}">
+      Your Independent Bookstore
+    </a>
+    <a href="//search.barnesandnoble.com/booksearch/isbnInquiry.asp?EAN={{ . }}" target="_blank" class="{{ $buylinkClasses }}">
+      Barnes & Noble
+    </a>
+    <span class='isbn10_{{ . }}'></span><!--  pulls in 10 digit ASIN for -->
+    {{ partial "books/amazon_convert_isbn_to_asin.js" (dict "edition" . "buylinkClasses" $buylinkClasses ) }}
+  {{ end }}
+
+  {{ with .context.Params.editions_isbn.ebook  }}
+    <a href="//itunes.apple.com/us/book/isbn{{ . }}" target="_blank" class="{{ $buylinkClasses }}">
       Apple iBooks
     </a>
   {{ end }}
