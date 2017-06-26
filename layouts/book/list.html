@@ -5,9 +5,9 @@
     {{ range .Data.Pages }}
       <section class="cf w-80-l ph4 ph4-m center pv4 pv5-l">
         {{- partial "books/header.html" . -}}
-        <div class="fl w-100 w-40-l pt2-l">
-          {{ with .Params.cover_image }}
-            <img src="{{ . }}" alt="" class="w-90 shadow-5 mt3-s mt0-m mt0-l mb2 mb0-l">
+        <div class="fl w-100 w-40-l pt2-l">          
+          {{ if .Params.images }}
+            <img src="{{ index (.Params.images) 0 }}" alt="Cover image for {{ .Title }}" class="w-90 shadow-5 mt3-s mt0-m mt0-l mb2 mb0-l">
           {{ end }}
           {{ partial "books/meta-data.html" . }}
         </div>
