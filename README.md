@@ -67,7 +67,7 @@ You may need to delete the line: `themesDir = "../.."`
 
 ### Change the hero background
 
-For any page or post you can add a featured image by including the local path in front matter (see content in the ExampleSite folder for examples): `featured_image: '/images/gohugo-default-sample-hero-image.jpg'`
+For any page or post you can add a featured image by including the local path in front matter (see content in the ExampleSite folder for examples): `images: '/images/gohugo-default-sample-hero-image.jpg'`
 
 You don't need an image though. The default background color is black, but you can change the color, by changing the default color class in the config.toml file. Choose a background color from any on the [Tachyons](http://tachyons.io/docs/themes/skins/) library site, and preface it with "bg-"
 
