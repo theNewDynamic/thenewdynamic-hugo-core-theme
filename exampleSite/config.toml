@@ -12,7 +12,7 @@ enableRobotsTXT = true
 preserveTaxonomyNames = true
 
 [social]
-twitter = "MelissaLaLinea"
+twitter = ""
 #facebook = ""
 #youtube = ""
 #instagram = ""
@@ -23,12 +23,7 @@ twitter = "MelissaLaLinea"
   filename = "sitemap.xml"
 
 [params]
+  body_classes = ""
   description = "The last theme you'll ever need. Maybe."
-  faceboook = ""
-  twitter = "https://twitter.com/GoHugoIO"
-  instagram = ""
-  youtube = ""
   # choose a background color from any on this page: http://tachyons.io/docs/themes/skins/ and preface it with "bg-"
-  background_color_class = "bg-black"
   featured_image = "/images/gohugo-default-sample-hero-image.jpg"
-  body_classes = "sans-serif bg-near-white"
