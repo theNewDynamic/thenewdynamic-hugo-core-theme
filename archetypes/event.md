@@ -2,7 +2,8 @@
 title: "{{ replace .TranslationBaseName "-" " " | title }}"
 date: {{ .Date }}
 draft: false
-image:
+images:
+ - 
 description:
 link:
 show_time: true
@@ -12,5 +13,5 @@ venue:
   name:
   state:
   zip:
-images: 
+images:
 ---
