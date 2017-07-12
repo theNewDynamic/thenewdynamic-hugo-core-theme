@@ -1,26 +1,36 @@
 {{ define "main" }}
-  <main class="w-100 cf min-vh-100">
-    <section class="cf w-80-l ph4 ph4-m center pv4 pv5-l">
+  <main class="min-vh-100 text-on-primary-color w-100">
+
+    <section class="ph4 ph4-m center pv4 pv5-l w-80-l {{ with .Site.Data.globals.book_page_classes }}{{ . }}{{ end }}">
       {{- partial "books/header.html" . -}}
-      <div class="fl w-100 w-40-l pt2-l">
-      {{ if .Params.images }}
-        <img src="{{ index (.Params.images) 0 }}" alt="Cover image for {{ .Title }}" class="w-90 shadow-5 mt3-s mt0-m mt0-l mb2 mb0-l">
-      {{ end }}
-        {{ partial "books/meta-data.html" . }}
-      </div>
-      <div class="fl w-100 w-60-l mt4 mt0-ns">
-        <div class="bb b--black-20 dark-gray measure-wide mv4 nested-copy-line-height">
-          {{ .Content }}
+
+      <div class="flex-l flex-wrap">
+        <div class="fl pt2-l w-100 w-40-l">
+        {{ if .Params.images }}
+          <img src="{{ index (.Params.images) 0 }}" alt="Cover image for {{ .Title }}" class="mb2 mb0-l mt0-l mt0-m mt3-s shadow-5 w-90">
+        {{ end }}
+          {{ partial "books/meta-data.html" . }}
         </div>
-        {{ partial "books/buylinks" (dict "context" . "buylinkClasses" "f5 link bg-animate hover-bg-near-black br2 ba ph3 pv2 mr1 mb2 db dib-ns black hover-white" "textcolor" "black") }}
+
+        <div class="mt0-ns mt4 w-100 w-60-l">
+          <div class="bb b--black-20 measure-wide mv4 nested-copy-line-height">
+            {{ .Content }}
+          </div>
+          {{ partial "books/buylinks" (dict "context" . "buylinkClasses" "ba bg-animate black br2 db dib-ns f5 hover-bg-near-black link mb2 mr1 ph3 pv2    hover-white" "textcolor" "black") }}
+        </div>
       </div>
+
+
     </section>
-    <section class="dark-gray w-80-l ph4 ph4-m center">
+
+
+    <section class="center ph4 ph4-m w-80-l">
       {{- partial "books/praise.html" (dict "count" 100 "context" . ) -}}
     </section>
-    <div class="tc mv5">
-    {{ partial "books/buylinks" (dict "context" . "buylinkClasses" "f5 link bg-animate hover-bg-near-black br2 ba ph3 pv2 mr1 mb2 db dib-ns black hover-white" "textcolor" "black") }}
 
+    <div class="tc mv5">
+    {{ partial "books/buylinks" (dict "context" . "buylinkClasses" "ba bg-animate black br2 db dib-ns f5 hover-bg-near-black link mb2 mr1 ph3 pv2    hover-white" "textcolor" "black") }}
     </div>
+
   </main>
 {{ end }}
