@@ -1,22 +1,22 @@
 <!-- TODO: Add follow intents where available TODO: Revisit color and hover color -->
 {{ $icon_size := "32px" }}
 {{ with .Site.Social.facebook }}
-  <a href="{{ . }}" class="facebook dib hover-gray link-transition link mr2 pt0-l pt3 z-999" title="Facebook link">
+  <a href="https://facebook.com/{{ . }}" class="facebook dib hover-gray link-transition link mr2 pt0-l pt3 z-999" title="Facebook link">
     {{ partial "svg/facebook.svg" (dict "size" $icon_size) }}
   </a>
 {{ end }}
 {{ with .Site.Social.twitter }}
-  <a href="{{ . }}" class="twitter dib hover-gray link-transition link mr2 pt0-l pt3 z-999" title="Twitter link">
+  <a href="https://twitter.com/{{ . }}" class="twitter dib hover-gray link-transition link mr2 pt0-l pt3 z-999" title="Twitter link">
     {{ partial "svg/twitter.svg" (dict "size" $icon_size) }}
   </a>
 {{ end }}
 {{ with .Site.Social.instagram }}
-  <a href="{{ . }}" class="instagram dib hover-gray link-transition link mr2 pt0-l pt3 z-999" title="Instagram link">
+  <a href="https://instagram.com/{{ . }}" class="instagram dib hover-gray link-transition link mr2 pt0-l pt3 z-999" title="Instagram link">
     {{ partial "svg/instagram.svg" (dict "size" $icon_size) }}
   </a>
 {{ end }}
 {{ with .Site.Social.youtube }}
-  <a href="{{ . }}" class="youtube dib hover-gray link-transition link mr3 pt0-l pt3 z-999" title="Youtube link">
+  <a href="https://youtube.com/{{ . }}" class="youtube dib hover-gray link-transition link mr3 pt0-l pt3 z-999" title="Youtube link">
     {{ partial "svg/youtube.svg" (dict "size" $icon_size) }}
   </a>
 {{ end }}
