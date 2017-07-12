@@ -11,6 +11,11 @@ colors:
   text-color-disabled:  "#F7f7f7"
   divider-color:        "#f6f6f6"
   warn-color: red
+  twitter: "#55acee"
+  facebook: "#3b5998"
+  instagram: "#e95950"
+  youtube: "#bb0000"
+
 
 fonts:
   sans-serif: "open sans"
