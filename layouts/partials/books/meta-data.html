@@ -3,17 +3,17 @@
     Publication Date: {{ . }}
   </h5>
 {{ end }}
-{{ with .Params.hardcover_isbn }}
+{{ with .Params.editions_isbn.hardcover }}
   <p class="f6 sans-serif mv2">
     Hardcover: {{ . }}
   </p>
 {{ end }}
-{{ with .Params.paperback_isbn }}
+{{ with .Params.editions_isbn.paperback }}
   <p class="f6 sans-serif mv2">
     Paperback: {{ . }}
   </p>
 {{ end }}
-{{ with .Params.ebook_isbn }}
+{{ with .Params.editions_isbn.ebook }}
   <p class="f6 sans-serif  mv2">
     Ebook: {{ . }}
   </p>
