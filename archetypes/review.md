@@ -1,7 +1,7 @@
 ---
 title: "{{ replace .TranslationBaseName "-" " " | title }}"
-attribution:
+attribution: ""
 date: {{ .Date }}
-book:
-description:
+book: book/slug.md
+description: ""
 ---
