@@ -1,11 +1,14 @@
 <footer class="bg-accent-color-dark bottom-0 w-100 pa3" role="contentinfo">
-  <div class="flex justify-between">
-  <a class="dn dib-ns f6 fw4 hover-white no-underline ph3 pv2 sans-serif text-color-secondary" href="{{ .Site.BaseURL }}" >
-    &copy; {{ now.Format "2006" }} {{ .Site.Title }}
-  </a>
-  <div>
-  {{ partial "social-follow.html" . }}
-  </div>
+  <div class="flex justify-between items-center">
+    <div class="flex items-center">
+      <a class="f5 fw4 hover-white no-underline ph3 sans-serif text-color-secondary" href="{{ .Site.BaseURL }}" >
+        &copy; {{ now.Format "2006" }} {{ .Site.Title }}
+      </a>
+      {{ partial "social-follow.html" . }}
+    </div>
 
+    <a class="dn dib-ns f7 fw4 hover-white no-underline ph3 pv2 sans-serif text-color-secondary" href="https://thenewdynamic.com" >
+      site by the New Dynamic
+    </a>
   </div>
 </footer>
