@@ -8,7 +8,7 @@
      {{- partial "global/color-palette.html" . -}}
    {{ end }}
   </head>
-  <body class="ma0{{ with .Site.Params.body_classes }} {{ . }}{{ end }}{{ with getenv "HUGO_ENV" }} {{ . }}{{ end }}">
+  <body class="{{ .Site.Params.body_classes  | default "bg-near-white sans-serif"}}{{ with getenv "HUGO_ENV" }} {{ . }}{{ end }}">
     {{ block "header" . }}{{ partial "global/header.html" .}}{{ end }}
     <div class="content">
       <main role="main">
