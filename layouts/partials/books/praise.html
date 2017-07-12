@@ -2,13 +2,15 @@
 {{ $reviews_related := where ($reviews) ".Params.book" .context.File.Path }}
 
 {{ if $reviews_related }}
-  <h2 class="mt5">
-    Praise for <i>{{ .context.Title }}</i>
-  </h2>
-  {{ $count := .count }}
-  {{ range first $count ($reviews_related) }}
-    {{ .Render "fancy-quote" }}
-  {{ end }}
+  <div id="praise">
+    <h2 class="mt5">
+      Praise for <i>{{ .context.Title }}</i>
+    </h2>
+    {{ $count := .count }}
+    {{ range first $count ($reviews_related) }}
+      {{ .Render "fancy-quote" }}
+    {{ end }}
+  </div>
 {{ end }}
 
 {{/* {{ $review_quotes := where (where $.Site.RegularPages "Section" "review") ".Params.book" .context.File.Path  }}
