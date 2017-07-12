@@ -9,7 +9,7 @@
         {{ partial "books/meta-data.html" . }}
       </div>
       <div class="fl w-100 w-60-l mt4 mt0-ns">
-        <div class="bb b--black-20 measure-wide mv4 nested-copy-line-height">
+        <div class="bb b--black-20 dark-gray measure-wide mv4 nested-copy-line-height">
           {{ .Content }}
         </div>
         {{ partial "books/buylinks" (dict "context" . "buylinkClasses" "f5 link bg-animate hover-bg-near-black br2 ba ph3 pv2 mr1 mb2 db dib-ns black hover-white" "textcolor" "black") }}
