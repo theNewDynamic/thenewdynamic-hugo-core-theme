@@ -38,7 +38,12 @@ module.exports = {
 	},
 
 	plugins: [
-		new ExtractTextPlugin("main.css"),
+		new ExtractTextPlugin({
+    filename:  (getPath) => {
+      return getPath('css/[name].[contenthash].css');
+    },
+    allChunks: true
+  }),
 		new webpack.ProvidePlugin({
             $: "jquery",
             jQuery: "jquery"
