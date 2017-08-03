@@ -1,5 +1,5 @@
-{{$scripts := readDir "/static/dist/js"}}
-{{range $scripts}}  
+{{$scripts := readDir  (.Site.Params.js_path | default "/themes/thenewdynamic-hugo-core-theme/static/dist/js")}}
+{{range $scripts}}
   <script src="{{.Name  | add "/dist/js/"}}" async></script>
 {{end}}
 
