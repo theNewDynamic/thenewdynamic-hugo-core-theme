@@ -1,4 +1,11 @@
-<script src="{{ "dist/app.bundle.js" | relURL }}" async></script>
+{{$scripts := readDir "/static/dist/js"}}
+{{range $scripts}}  
+  <script src="{{.Name  | add "/dist/js/"}}" async></script>
+{{end}}
+
+
+
+
 
   <script>
     document.body.onkeyup = function(e){
