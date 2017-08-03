@@ -43,12 +43,7 @@ module.exports = {
       return getPath('css/[name].[contenthash].css');
     },
     allChunks: true
-  }),
-		new webpack.ProvidePlugin({
-            $: "jquery",
-            jQuery: "jquery"
-        })
-	],
+  }),		
 	watchOptions: {
 		watch: true
 	}
