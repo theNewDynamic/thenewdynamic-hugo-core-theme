@@ -24,6 +24,8 @@ twitter = ""
   filename = "sitemap.xml"
 
 [params]
+# js_path = "/static/dist/js"
+# css_path = "/static/dist/css"
   body_classes = ""
   description = "The last theme you'll ever need. Maybe."
   # choose a background color from any on this page: http://tachyons.io/docs/themes/skins/ and preface it with "bg-"
