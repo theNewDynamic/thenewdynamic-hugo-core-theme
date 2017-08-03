@@ -29,8 +29,8 @@ module.exports = {
 	},
 
 	output: {
-    path: path.join(__dirname, "./../static/dist"),
-		filename: '[name].bundle.js',
+    path: path.join(__dirname, "./../static/dist/js"),
+		filename: '[name].bundle.[hash].js',
 	},
 
 	resolve: {
@@ -43,7 +43,7 @@ module.exports = {
       return getPath('css/[name].[contenthash].css');
     },
     allChunks: true
-  }),		
+  }),
 	watchOptions: {
 		watch: true
 	}
