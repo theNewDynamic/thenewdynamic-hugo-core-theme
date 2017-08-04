@@ -11,7 +11,7 @@
   <body class="{{ $.Param "body_classes"  | default "bg-near-white sans-serif"}}{{ with getenv "HUGO_ENV" }} {{ . }}{{ end }}">
     {{ block "header" . }}{{ partial "global/header.html" .}}{{ end }}
     <div class="content">
-      <main{{with $.Param "content_classes"}} class="{{.}}"{{end}}role="main">
+      <main id="main" {{with $.Param "content_classes"}} class="{{.}}"{{end}}role="main">
         {{ block "hero" . }}{{ end }}
         {{ block "main" . }}{{ end }}
       </main>
