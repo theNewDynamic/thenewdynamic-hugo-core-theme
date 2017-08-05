@@ -1,9 +1,5 @@
 {{ define "main" }}
-  <article class="cf pa3 pa4-m pa4-l">
-    <div class="measure-wide-l center f4 lh-copy nested-copy-line-height nested-links nested-img mid-gray">
-      {{ .Content }}
-    </div>
-  </article>
+  {{partial "article-listpage.html" .}}
   <div class="mw8 center">
     {{ $section := where .Data.Pages "Section" .Section }}
     <section class="flex-ns flex-wrap justify-around mt5">
