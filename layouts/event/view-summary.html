@@ -1,0 +1,17 @@
+<div class="flex flex-wrap justify-between">
+  {{ with .Params.images }}
+    <div class="w-100 w-30-l">
+      <img src="{{ index . 0 }}" class="center img tc" alt="{{$.Title | safeHTML}}" />
+    </div>
+  {{ end }}
+  <div class="nested-copy-line-height pt4 pt0-l{{with .Params.images}} w-100 w-70-l pl4-l{{end}}">
+    {{ partial "components/time.html" (dict "context" . "show_time" false ) }}
+    <h2 class="f3 mb4 mt1">
+      <a href="{{.URL}}" class="accent-color hover-black link">
+        {{.Title }}
+      </a>
+    </h2>
+    <p>{{.Summary}}</p>
+    <a href="{{.URL}}" class="accent-color f7 link">more information &raquo;</a>
+  </div>
+</div>
