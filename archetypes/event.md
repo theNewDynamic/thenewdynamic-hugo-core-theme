@@ -3,7 +3,6 @@ title: "{{ replace .TranslationBaseName "-" " " | title }}"
 date: {{ .Date }}
 draft: false
 images:
- - 
 description:
 link:
 show_time: true

@@ -6,7 +6,7 @@
 </h1>
 
 {{ with .Params.images }}
-  <img src="{{ . }}" class="img center tc"/>
+  <img src="{{ index . 0 }}" class="img center tc"/>
 {{ end }}
 
 <div class="f4 nested-copy-line-height nested-links">
