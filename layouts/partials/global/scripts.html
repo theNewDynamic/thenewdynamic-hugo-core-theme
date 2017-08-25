@@ -2,20 +2,3 @@
 {{range $scripts}}
   <script src="{{.Name  | add "/dist/js/"}}" async></script>
 {{end}}
-
-
-
-
-
-  <script>
-    document.body.onkeyup = function(e){
-
-      {{ if .PrevInSection }}
-        if (e.keyCode == '37') { window.location = '{{ .PrevInSection.Permalink }}'; }
-      {{ end }}
-      {{ if .NextInSection }}
-        if (e.keyCode == '39') { window.location = '{{.NextInSection.Permalink }}'; }
-      {{ end }}
-    };
-
-  </script>
