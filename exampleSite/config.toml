@@ -6,14 +6,16 @@ theme = "thenewdynamic-hugo-core-theme"
 MetaDataFormat = "yaml"
 DefaultContentLanguage = "en"
 SectionPagesMenu = "main"
-Paginate = 3 # this is set low for demonstrating with dummy content. Set to a higher number
+Paginate = 30 # this is set low for demonstrating with dummy content. Set to a higher number
 googleAnalytics = ""
 enableRobotsTXT = true
 preserveTaxonomyNames = true
 newContentEditor = "atom"
+disableAliases = true
+
 
 [outputs]
-  home = ["HTML", "RSS", "JSON", "HEADERS"]
+  home = ["HTML", "RSS", "JSON", "HEADERS", "REDIRECTS"]
   page = ["HTML","JSON"]
 
 [mediaTypes]
@@ -22,7 +24,7 @@ newContentEditor = "atom"
   delimiter = ""
 
 [outputFormats]
-[outputFormats.REDIR]
+[outputFormats.REDIRECTS]
   mediatype = "text/netlify"
   baseName = "_redirects"
   isPlainText = true
