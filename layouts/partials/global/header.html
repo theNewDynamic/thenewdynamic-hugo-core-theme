@@ -20,7 +20,7 @@
   </header>
 {{ else }}
   <header>
-    <div class="pb3-m pb5-l {{ .Site.Params.background_color_class | default "bg-primary-color-dark" }}">
+    <div class="pb3-m pb5-l {{ .Site.Params.styles.background_color_class | default "bg-primary-color-dark" }}">
       {{ partial "global/navigation.html" . }}
       <div class="ph3 ph4-ns pv3 tc-l">
         <h1 class="f-subheadline-l f2 fw2 lh-title light-silver mb0">

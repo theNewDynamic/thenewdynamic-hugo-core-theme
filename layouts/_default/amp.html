@@ -13,7 +13,7 @@
   {{- partial "global/head-additions.html" . -}}
 
   </head>
-  <body class="ma0{{ with .Site.Params.body_classes }} {{ . }}{{ end }}{{ with getenv "HUGO_ENV" }} {{ . }}{{ end }}">
+  <body class="ma0{{ with .Site.Params.styles.body_classes }} {{ . }}{{ end }}{{ with getenv "HUGO_ENV" }} {{ . }}{{ end }}">
     {{ block "nav" . }}{{ .Render "nav" }}{{ end }}
     <div class="content">
       {{ block "header" . }}{{ partial "global/header.html" .}}{{ end }}
