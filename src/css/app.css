@@ -2,14 +2,14 @@
 @import '_tachyons';
 
  /*Modules */
-
+@import 'modules/_color-scheme';
 @import 'modules/_hugo-internal-templates';
 @import 'modules/_svg';
 
 
 
  /*Variables */
-/*@import '_variables';*/
+@import '_variables';
 
  /*Addons */
 /*@import 'font/_muli-200';

@@ -11,7 +11,7 @@
     <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
   {{ end }}
   {{/* LINKS */}}
-  {{$stylesheet := readDir (.Site.Params.css_path | default "/themes/thenewdynamic-hugo-core-theme/static/dist/css")}}
+  {{$stylesheet := readDir ( $.Param "dev.css_path" | default "/themes/thenewdynamic-hugo-core-theme/static/dist/css")}}
   {{range $stylesheet}}
     <link href='{{.Name  | add "/dist/css/"}}' rel='stylesheet' type="text/css" />
   {{end}}

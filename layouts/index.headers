@@ -6,7 +6,7 @@
   Referrer-Policy: no-referrer-when-downgrade
 
 /*
-  {{$stylesheet := readDir (.Site.Params.styles.css_path | default "/themes/thenewdynamic-hugo-core-theme/static/dist/css")}}{{$scripts := readDir  (.Site.Params.js_path | default "/themes/thenewdynamic-hugo-core-theme/static/dist/js")}}
+  {{$stylesheet := readDir ( $.Param "dev.css_path" | default "/themes/thenewdynamic-hugo-core-theme/static/dist/css")}}{{$scripts := readDir  (.Site.Params.js_path | default "/themes/thenewdynamic-hugo-core-theme/static/dist/js")}}
   {{range $stylesheet}}
   Link: <{{- .Name  | add "/dist/css/" -}}>; rel=preload; as=style
   {{end}}

@@ -3,10 +3,7 @@
   <head>
     <title>{{ .Site.Title }} {{ with .Title }} | {{ . }}{{ end }}</title>
     {{- partial "global/head-meta-and-links.html" . -}}
-    {{- partial "global/head-additions.html" . -}}
-    {{ block "css" . }}
-     {{- partial "global/color-palette.html" . -}}
-   {{ end }}
+    {{- partial "global/head-additions.html" . -}}    
   </head>
   <body class="{{ $.Param "styles.body_classes"  | default "bg-near-white sans-serif"}}{{ with getenv "HUGO_ENV" }} {{ . }}{{ end }}">
     {{ block "header" . }}{{ partial "global/header.html" .}}{{ end }}

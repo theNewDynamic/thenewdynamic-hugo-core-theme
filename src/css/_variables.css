@@ -1,3 +1,20 @@
 :root {
-  --sidebar-width: 23%;
+  --primary-color:        #fff;
+  --primary-color-dark:   #111;
+  --primary-color-light:  #ABA194;
+  --accent-color:         #D3002D;
+  --accent-color-light:   #F2F4F3;
+  --accent-color-dark:    #111;
+  --text-color-primary:   #111;
+  --text-on-primary-color: #111;
+  --text-color-secondary: #555;
+  --text-color-disabled:  #F7f7f7;
+  --divider-color:        #f6f6f6;
+  --warn-color: red;
+  --red:  var(--accent-color);
+  --twitter: "#55acee";
+  --facebook: "#3b5998";
+  --instagram: "#e95950";
+  --youtube: "#bb0000";
+
 }
