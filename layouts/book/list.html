@@ -10,9 +10,7 @@
 
         <div class="flex-l flex-wrap">
           <div class="w-100 w-40-l pt2-l">
-            {{ if .Params.images }}
-              <img src="{{ index (.Params.images) 0 }}" alt="Cover image for {{ .Title }}" class="w-90 shadow-5 mt3-s mt0-m mt0-l mb2 mb0-l">
-            {{ end }}
+            {{ partial "books/cover.html" . }}
             {{ partial "books/meta-data.html" . }}
           </div>
 
