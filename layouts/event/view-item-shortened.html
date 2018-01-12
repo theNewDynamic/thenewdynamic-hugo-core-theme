@@ -10,5 +10,9 @@
 {{ end }}
 
 <div class="nested-copy-line-height nested-links">
-  {{ .Content }}
+{{ if .Content }}
+  {{.Content}}
+{{else if .Params.description}}
+  {{.Params.description}}
+{{end}}
 </div>

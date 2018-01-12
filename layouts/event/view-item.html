@@ -10,7 +10,11 @@
 {{ end }}
 
 <div class="f4 nested-copy-line-height nested-links">
-  {{ .Content }}
+{{ if .Content }}
+  {{- .Content -}}
+{{else if .Params.description}}
+  {{- .Params.description -}}
+{{end}}
 </div>
 
 <div class="b--light-gray bt f6 mid-gray pt3 sans-serif">

@@ -4,12 +4,15 @@
   {{ $events_past := where $section.Reverse ".Date.Unix" "<" now.Unix }}
 
   <div class="center cf min-vh-100 mw7 pv5 ph3 ph4-ns">
-
-    {{ range $events }}
-      <article class="bg-accent-color-light gray mb4 pa4 relative w-100">
-        {{ .Render "view-item" }}
-      </article>
-    {{ end }}
+  {{with $events}}
+    <div class="mb6">
+      {{ range . }}
+        <article class="bg-accent-color-light gray mb4 pa4 relative w-100">
+          {{ .Render "view-item" }}
+        </article>
+      {{ end }}
+    </div>
+  {{end}}
 
     <h1 class="color-inherit">
       Past Events
